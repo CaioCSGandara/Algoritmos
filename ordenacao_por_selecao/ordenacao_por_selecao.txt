@@ -1,0 +1,12 @@
+Algoritmo: Ordenação por Seleção
+
+Tempo de execução: O(n²)
+
+Descrição: Algoritmo de ordenação inicial apresentado no livro "Estudando Algoritmos".
+Tem um desempenho ruim, já que é composto por duas funções de tempo O(n).
+Consiste em:
+ - pegar um vetor ordenado
+ - usar algoritmo que encontra o menor elemento deste vetor
+ - apagar o menor elemento encontrado no vetor e adiciona-lo em outro vetor, que estará ordenado ao fim do processo
+
+ Exemplo:

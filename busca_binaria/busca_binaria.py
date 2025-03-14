@@ -1,7 +1,7 @@
-import random
 from time import time
 
 from utils.CalculadoraDeTempo import CalculadoraDeTempo
+from utils.DataInitializer import DataInitializer
 from utils.LeitorDescricao import LeitorDescricao
 
 
@@ -13,14 +13,6 @@ class BuscaBinaria:
         self.tempo_execucao_ms = 0
         self.qtd_pesquisas = 0
 
-
-    def gerar_vetor_ordenado(self):
-        for i in range(0, 50000):
-            self.vetor.append(i)
-
-
-    def gerar_elemento_para_busca(self):
-        self.elemento_para_busca = random.randint(1, 50000)
 
     def busca_binaria(self):
         inicio_vetor = 0
@@ -52,10 +44,10 @@ class BuscaBinaria:
 
 if __name__ == "__main__":
     print(LeitorDescricao.ler_descricao("busca_binaria.txt"))
-    b = BuscaBinaria()
-    b.gerar_vetor_ordenado()
-    b.gerar_elemento_para_busca()
-    elem = b.busca_binaria()
-    print("Elemento buscado:", b.elemento_para_busca)
-    print("Tempo de execução:", b.tempo_execucao_ms, "ms")
-    print("Quantidade de pesquisas realizadas:", b.qtd_pesquisas)
+    buscador = BuscaBinaria()
+    buscador.vetor = DataInitializer.iniciar_vetor_ordenado(50000)
+    buscador.elemento_para_busca = DataInitializer.gerar_elemento_de_busca(50000)
+    elem = buscador.busca_binaria()
+    print("Elemento buscado:", buscador.elemento_para_busca)
+    print("Tempo de execução:", buscador.tempo_execucao_ms, "ms")
+    print("Quantidade de pesquisas realizadas:", buscador.qtd_pesquisas)

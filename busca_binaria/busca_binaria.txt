@@ -4,6 +4,7 @@ Tempo de execução: O(log n)
 
 Descrição:
 Um algoritmo de busca usado em listas ordenadas para otimizar o tempo de busca.
+Sua implementação é feita com vetor, pois o tempo de pesquisa imediata de um elemento específico em um vetor é O(1).
 Busca sempre o elemento central da lista primeiro.
 - Se o elemento encontrado for o procurado, encerra a execução;
 - Como a lista é ordenada, é possível saber se o elemento procurado está à direita ou à esquerda do encontrado;
