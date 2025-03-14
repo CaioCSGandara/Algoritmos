@@ -1,0 +1,17 @@
+Algoritmo: Busca Binária
+
+Tempo de execução: O(log n)
+
+Descrição:
+Um algoritmo de busca usado em listas ordenadas para otimizar o tempo de busca.
+Busca sempre o elemento central da lista primeiro.
+- Se o elemento encontrado for o procurado, encerra a execução;
+- Como a lista é ordenada, é possível saber se o elemento procurado está à direita ou à esquerda do encontrado;
+- Se estiver à esquerda, descartamos toda a parte da lista à direita do elemento encontrado;
+- Se estiver à direita, descartamos toda a parte da lista à esquerda do elemento encontrado;
+- Após isso, inicia-se o processo novamente, onde o vetor agora terá menos elementos, visto que uma parte foi descartada.
+
+Exemplo:
+
+Buscando número aleatório em um vetor com os números ordenados de 1 a 50000:
+
